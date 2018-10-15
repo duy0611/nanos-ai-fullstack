@@ -1,0 +1,73 @@
+{
+    "name": "AdCampaignPlatform",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "AdCampaignPlatformType",
+            "fieldValues": "Facebook,Instagram,Google"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "AdCampaignStatus",
+            "fieldValues": "Scheduled,Delivering,Ended"
+        },
+        {
+            "fieldName": "totalBudget",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "remainingBudget",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "targetAudiance",
+            "otherEntityName": "audiance",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "adCampaignPlatform"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "creatives",
+            "otherEntityName": "creatives",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "adCampaignPlatform"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "insights",
+            "otherEntityName": "insights",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "adCampaignPlatform"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "adCampaign",
+            "otherEntityName": "adCampaign",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015045309",
+    "entityTableName": "ad_campaign_platform",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipClient": true
+}

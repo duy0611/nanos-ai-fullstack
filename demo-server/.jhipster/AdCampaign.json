@@ -1,0 +1,40 @@
+{
+    "name": "AdCampaign",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "goal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totalBudget",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "AdCampaignStatus",
+            "fieldValues": "Scheduled,Delivering,Ended"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "platforms",
+            "otherEntityName": "adCampaignPlatform",
+            "otherEntityRelationshipName": "adCampaign"
+        }
+    ],
+    "changelogDate": "20181015045308",
+    "entityTableName": "ad_campaign",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipClient": true
+}

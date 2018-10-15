@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	
+	<!-- Added the constraints for entity Audiance. -->
+	<changeSet id="20181015045310-2" author="jhipster">
+
+		<addForeignKeyConstraint baseColumnNames="audiance_id"
+			baseTableName="audiance_language_code" constraintName="fk_audiance_language_code_audiance_id"
+			referencedColumnNames="id" referencedTableName="audiance" />
+
+		<addForeignKeyConstraint baseColumnNames="audiance_id"
+			baseTableName="audiance_location" constraintName="fk_audiance_location_audiance_id"
+			referencedColumnNames="id" referencedTableName="audiance" />
+
+		<addForeignKeyConstraint baseColumnNames="audiance_id"
+			baseTableName="audiance_interest" constraintName="fk_audiance_interest_audiance_id"
+			referencedColumnNames="id" referencedTableName="audiance" />
+
+		<addForeignKeyConstraint baseColumnNames="audiance_id"
+			baseTableName="audiance_key_word" constraintName="fk_audiance_key_word_audiance_id"
+			referencedColumnNames="id" referencedTableName="audiance" />
+
+	</changeSet>
+</databaseChangeLog>

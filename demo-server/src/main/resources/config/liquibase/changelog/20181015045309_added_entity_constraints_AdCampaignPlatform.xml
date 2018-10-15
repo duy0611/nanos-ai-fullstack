@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity AdCampaignPlatform.
+    -->
+    <changeSet id="20181015045309-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="target_audiance_id"
+                                 baseTableName="ad_campaign_platform"
+                                 constraintName="fk_ad_campaign_platform_target_audiance_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="audiance"/>
+
+        <addForeignKeyConstraint baseColumnNames="creatives_id"
+                                 baseTableName="ad_campaign_platform"
+                                 constraintName="fk_ad_campaign_platform_creatives_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="creatives"/>
+
+        <addForeignKeyConstraint baseColumnNames="insights_id"
+                                 baseTableName="ad_campaign_platform"
+                                 constraintName="fk_ad_campaign_platform_insights_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="insights"/>
+
+        <addForeignKeyConstraint baseColumnNames="ad_campaign_id"
+                                 baseTableName="ad_campaign_platform"
+                                 constraintName="fk_ad_campaign_platform_ad_campaign_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ad_campaign"/>
+
+    </changeSet>
+</databaseChangeLog>

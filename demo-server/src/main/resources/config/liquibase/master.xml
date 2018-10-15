@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    
+    <include file="config/liquibase/changelog/20181015045308_added_entity_AdCampaign.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045309_added_entity_AdCampaignPlatform.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045310_added_entity_Audiance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045311_added_entity_Languages.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045312_added_entity_Locations.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045313_added_entity_Interests.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045314_added_entity_KeyWords.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045315_added_entity_Creatives.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045316_added_entity_Insights.xml" relativeToChangelogFile="false"/>
+    
+    <include file="config/liquibase/changelog/20181015045309_added_entity_constraints_AdCampaignPlatform.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181015045310_added_entity_constraints_Audiance.xml" relativeToChangelogFile="false"/>
+</databaseChangeLog>

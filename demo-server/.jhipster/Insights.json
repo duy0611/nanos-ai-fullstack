@@ -1,0 +1,44 @@
+{
+    "name": "Insights",
+    "fields": [
+        {
+            "fieldName": "impression",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "clicks",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nanosScore",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "costPerClick",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "clickThroughRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "advancedKpi1",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "advancedKpi2",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181015045315",
+    "entityTableName": "insights",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "skipClient": true
+}

@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ai.nanos.fullstack"
+    },
+    "jhipsterVersion": "5.4.2",
+    "applicationType": "monolith",
+    "baseName": "demo",
+    "packageName": "ai.nanos.fullstack",
+    "packageFolder": "ai/nanos/fullstack",
+    "serverPort": "8080",
+    "authenticationType": "session",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "rememberMeKey": "5134433b7349c28bd2f702676bba3fa5929046c1adc2724e0286ba97a16dd24563c1b58e5271f4a8e7f62cf195e3961088ff",
+    "enableTranslation": false
+  }
+}

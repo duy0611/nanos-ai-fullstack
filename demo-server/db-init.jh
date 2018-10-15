@@ -1,0 +1,92 @@
+enum AdCampaignStatus {
+	Scheduled, Delivering, Ended
+}
+
+entity AdCampaign {
+	id Long,
+    name String,
+    goal String,
+    totalBudget Integer,
+    status AdCampaignStatus
+}
+
+enum AdCampaignPlatformType {
+	Facebook, Instagram, Google
+}
+
+entity AdCampaignPlatform {
+	id Long,
+    type AdCampaignPlatformType,
+    status AdCampaignStatus,
+    totalBudget Integer,
+    remainingBudget Integer,
+    startDate ZonedDateTime,
+    endDate ZonedDateTime
+}
+
+relationship OneToMany {
+	AdCampaign {platforms} to AdCampaignPlatform {adCampaign}
+}
+
+entity Audiance {
+	id Long,
+    genders String,
+    ageRange String
+}
+
+relationship OneToOne {
+	AdCampaignPlatform {targetAudiance} to Audiance
+}
+
+entity Languages {
+	code String
+}
+
+entity Locations {
+	name String
+}
+
+entity Interests {
+	name String
+}
+
+relationship ManyToMany {
+	Audiance {languages} to Languages
+}
+
+relationship ManyToMany {
+	Audiance {locations} to Locations
+}
+
+relationship ManyToMany {
+	Audiance {interests} to Interests
+}
+
+entity Creatives {
+	id Long,
+    header String,
+    description String,
+    url String,
+    image String
+}
+
+entity Insights {
+	id Long,
+    impression Integer,
+    clicks Integer,
+    nanosScore Double,
+    costPerClick Double,
+    clickThroughRate Double,
+    advancedKpi1 Double,
+    advancedKpi2 Double
+}
+
+relationship OneToOne {
+	AdCampaignPlatform {creatives} to Creatives
+}
+
+relationship OneToOne {
+	AdCampaignPlatform {insights} to Insights
+}
+
+skipClient all
