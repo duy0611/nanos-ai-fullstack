@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 /**
  * Spring Data  repository for the Creatives entity.
  */
-@SuppressWarnings("unused")
 @Repository
 public interface CreativesRepository extends JpaRepository<Creatives, Long> {
 

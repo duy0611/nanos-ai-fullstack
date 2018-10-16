@@ -13,7 +13,6 @@ import java.util.Optional;
 /**
  * Spring Data  repository for the Audiance entity.
  */
-@SuppressWarnings("unused")
 @Repository
 public interface AudianceRepository extends JpaRepository<Audiance, Long> {
 

@@ -98,7 +98,7 @@ public class AdCampaignResource {
     @Timed
     public ResponseEntity<AdCampaign> getAdCampaign(@PathVariable Long id) {
         log.debug("REST request to get AdCampaign : {}", id);
-        Optional<AdCampaign> adCampaign = adCampaignRepository.findById(id);
+        Optional<AdCampaign> adCampaign = adCampaignRepository.findOneWithPlatformsById(id);
         return ResponseUtil.wrapOrNotFound(adCampaign);
     }
 

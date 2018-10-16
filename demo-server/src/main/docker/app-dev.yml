@@ -1,0 +1,9 @@
+version: '2'
+services:
+    demo-app-dev:
+        image: demo-server
+        environment:
+            # - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=dev,swagger
+        ports:
+            - 1234:1234

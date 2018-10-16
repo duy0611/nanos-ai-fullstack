@@ -70,6 +70,14 @@ Then run:
 
     docker-compose -f src/main/docker/app.yml up -d
 
+To run the app with DEV profile as docker container, first build the app with dev profile:
+
+	 ./mvnw package -Pdev jib:dockerBuild
+	 
+Then run:
+
+	 docker-compose -f src/main/docker/app-dev.yml up -d
+
 For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
 
 ## Continuous Integration (optional)
