@@ -1,0 +1,23 @@
+.platform-container {
+  margin-top: 8px;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      width: 50%;
+    }
+  }
+  .platform-target, .platform-creatives, .platform-insights {
+    margin-top: 8px;
+  }
+  .platform-target {
+    .tag {
+      margin: 2px 4px;
+    }
+  }
+  .platform-creatives {
+    .creative-image {
+      width: 100%;
+    }
+  }
+}

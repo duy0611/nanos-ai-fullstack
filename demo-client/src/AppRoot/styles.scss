@@ -1,0 +1,23 @@
+html, body, #root, .app {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar-paper {
+  position: relative;
+  width: 240px;
+  white-space: nowrap;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  margin-left: 240px; /* width of sidebar */
+  padding: 16px 24px;
+}
+
+h6.info-label {
+  display: inline-block;
+}
